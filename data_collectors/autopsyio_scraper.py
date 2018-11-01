@@ -1,16 +1,10 @@
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
-import numpy as np
 
-
-
-
-
-
-
-
-
+# ===================================================================
+#      HELPER FUNCTION TRANSFORMS BEAUTIFULSOUP OBJECTS TO DATAFRAMES
+# ===================================================================
 def get_df(tr_array):
     dataset = []
     for tr in tr_array:
@@ -23,22 +17,13 @@ def get_df(tr_array):
     dataset = dataset[2:]
     return pd.DataFrame(dataset, columns=columns)
 
-    
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
+# ====================================================================
+#           Main Function
+# ====================================================================
 def main():
     base = "http://autopsy.io"
     directory_save = "datasets/"
@@ -53,10 +38,6 @@ def main():
         df.to_csv("{}/{}".format(directory_save, file_name))
     except Exception as e:
         print(e)
-
-
-
-
 
 
 if __name__ == "__main__":
