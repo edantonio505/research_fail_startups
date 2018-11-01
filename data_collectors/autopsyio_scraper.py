@@ -1,6 +1,8 @@
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
+import os
+
 
 # ===================================================================
 #      HELPER FUNCTION TRANSFORMS BEAUTIFULSOUP OBJECTS TO DATAFRAMES
@@ -63,7 +65,8 @@ def get_df(tr_array):
 # ====================================================================
 def main():
     base = "http://autopsy.io"
-    directory_save = "datasets/autopsy_io/"
+    path = str(os.getcwd()).replace("data_collectors", "")
+    directory_save = "{}datasets/autopsy_io/".format(path)
     file_name = "failed_companies_autopsyio_dataset.csv"
     r = requests.get(base)
     soup =  BeautifulSoup(r.text, 'html.parser')
