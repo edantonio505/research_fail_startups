@@ -2,3 +2,5 @@ https://www.crunchbase.com/
 https://github.com/notpeter/crunchbase-data
 https://angel.co/companies
 http://autopsy.io
+https://towardsdatascience.com/tale-of-1000-crunchbase-startups-6de0ff97f60e
+https://www.kaggle.com/aashay96/san-francisco-based-startups
