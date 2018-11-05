@@ -66,7 +66,8 @@ def save_dataframe(matrix):
     file_name = "angelco_companies.csv"
     columns = ["Company", "Link", "Pitch", "Joined", "Location", "Market", "Website", "Employees", "Stage", "Total_raised"]
     df = pd.DataFrame(matrix, columns=columns)
-    df.to_csv("{}/{}".format(directory_save, file_name))
+    df.drop_duplicates(inplace=True)
+    df.to_csv("{}/{}".format(directory_save, file_name), index=False)
     df = None
     print("Dataframe saved")
 
