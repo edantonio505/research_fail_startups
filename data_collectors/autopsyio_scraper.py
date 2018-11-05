@@ -75,7 +75,7 @@ def main():
     print(df)
     try:    
         print("Dataset saved successfuly")
-        df.to_csv("{}/{}".format(directory_save, file_name))
+        df.to_csv("{}/{}".format(directory_save, file_name), index=False)
     except Exception as e:
         print(e)
 
