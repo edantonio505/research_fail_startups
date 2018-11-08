@@ -1,3 +1,8 @@
 .DS_Store
 .ipynb_checkpoints
 jupyter.logs
+creds.py
+Tags_automation_study.ipynb
+__pycache__
+
+
